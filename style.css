@@ -99,8 +99,8 @@ body {
 }
 
 .home-img img {
-  max-width: 400px;
-  margin-right: 10px;
+  width: 700px;
+  margin-left: 300px;
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: 2s, 3s;
