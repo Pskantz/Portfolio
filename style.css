@@ -259,8 +259,8 @@ body {
 .image-container img {
   display: grid;
   width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  height: 250px;
+  border-radius: 10%;
   inline-size: 300px;
   transition: transform 0.2s ease-in-out;
 }
