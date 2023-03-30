@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <nav class="navbar">
+        <a href="#home" style="--i: 1" class="active">Home</a>
+        <a href="#about" style="--i: 2">About</a>
+        <a href="#skills" style="--i: 3">Skills</a>
+        <a href="#portfolio" style="--i: 4">Portfolio</a>
+      </nav>
+    </header>
+    <section class="home">
+      <div class="home-content">
+        <h1>Patrik Skantz</h1>
+        <h3>Välkommen till min portfolio</h3>
+        <h3>Studerar <span class="multiple-text"></span></h3>
+        <p></p>
+        <div class="social-media">
+          <a href="#" style="--1: 6"><i class="bx bxl-facebook"></i></a>
+          <a
+            href="https://www.linkedin.com/in/patrik-skantz-1a9100249/"
+            style="--1: 7"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://github.com/Pskantz" style="--1: 8"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </div>
+        <a
+          href="https://drive.google.com/drive/folders/1dR2Hpe6_IHr9gDW8OcLT46QPJAQ4QdMH?usp=share_link"
+          class="btn"
+          >Ladda ner Cv</a
+        >
+      </div>
+
+      <div class="home-img">
+        <img src="#" width="400px" alt="" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="portfoliobild.jpg" alt="" />
+        <div class="about-text">
+          <h3>Patrik Skantz</h3>
+          <p>Age: 29</p>
+          <p>
+            Studerar Fullstack Open Sourse på Nackademin. Förväntad examen i maj
+            2024.
+          </p>
+          <p>Är för närvarande en av två studierepresentanter.</p>
+          <p>Klicka på ikonerna för att komma till min GitHub och LinkedIn.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <p>Here are some of my skills.</p>
+      <div class="skills-list">
+        <div class="skill">
+          <i class="bx bxl-react skill-icon"></i>
+          <h3 class="skill-name">React</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-nodejs skill-icon"></i>
+          <h3 class="skill-name">Node Js</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-mysql skill-icon"></i>
+          <h3 class="skill-name">Mysql</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-express skill-icon"></i>
+          <h3 class="skill-name">Express</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-html5 skill-icon"></i>
+          <h3 class="skill-name">HTML</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-css3 skill-icon"></i>
+          <h3 class="skill-name">CSS</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-sass skill-icon"></i>
+          <h3 class="skill-name">SASS</h3>
+        </div>
+        <div class="skill">
+          <i class="bx bxl-javascript skill-icon"></i>
+          <h3 class="skill-name">Javascript</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Mina projekt.</p>
+
+      <div class="image-container">
+        <a href="https://github.com/Pskantz/Backend1-Todoapp"
+          ><img src="Skärmbild 2023-03-29 215819.png" alt="Project 1"
+        /></a>
+        <a href="https://github.com/Pskantz/Event-sida-Frontend2-html-css"
+          ><img src="Skärmbild.png" alt="Project 2"
+        /></a>
+        <a href="https://github.com/Pskantz/Skantz-Netflex"
+          ><img src="Skärmbild netflix.png" alt="Project 3"
+        /></a>
+      </div>
+
+      <div class="github-link">
+        <a href="https://github.com/yourusername">Visit my GitHub profile</a>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script>
+      const navbarLinks = document.querySelectorAll(".navbar a");
+
+      navbarLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const href = link.getAttribute("href");
+          const offsetTop = document.querySelector(href).offsetTop;
+
+          scroll({
+            top: offsetTop,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
